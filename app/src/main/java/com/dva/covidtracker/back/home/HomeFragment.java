@@ -1,4 +1,4 @@
-package com.abdulazizahwan.trackcovid19.ui.home;
+package com.dva.covidtracker.back.home;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.abdulazizahwan.trackcovid19.R;
+import com.dva.covidtracker.R;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;

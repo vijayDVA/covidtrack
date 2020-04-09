@@ -1,4 +1,4 @@
-package com.abdulazizahwan.trackcovid19.ui.country;
+package com.dva.covidtracker.back.country;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.abdulazizahwan.trackcovid19.R;
+import com.dva.covidtracker.R;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -89,21 +89,24 @@ public class CountryFragment extends Fragment {
                     Log.e(TAG, "onResponse: " + response);
                     try {
                         JSONArray jsonArray = new JSONArray(response);
-                        for (int i = 0; i < jsonArray.length(); i++) {
+                        for (int i = 0; i < jsonArray.length(); i++)
+                        {
                             JSONObject data = jsonArray.getJSONObject(i);
 
                             // Extract JSONObject inside JSONObject
                             JSONObject countryInfo = data.getJSONObject("countryInfo");
-
-                            covidCountries.add(new CovidCountry(
-                                    data.getString("country"), data.getString("cases"),
-                                    data.getString("todayCases"), data.getString("deaths"),
-                                    data.getString("todayDeaths"), data.getString("recovered"),
-                                    data.getString("active"), data.getString("critical"),
-                                    countryInfo.getString("flag")
-                                    ));
+                            if(data.getString("country") .equals("India"))
+                            {
+                                covidCountries.add(new CovidCountry(
+                                        data.getString("country"), data.getString("cases"),
+                                        data.getString("todayCases"), data.getString("deaths"),
+                                        data.getString("todayDeaths"), data.getString("recovered"),
+                                        data.getString("active"), data.getString("critical"),
+                                        countryInfo.getString("flag")
+                                ));
+                            }
                         }
-                        tvTotalCountry.setText(jsonArray.length()+" countries");
+                        tvTotalCountry.setText( "INDIA");
                         showRecyclerView();
                     } catch (JSONException e) {
                         e.printStackTrace();

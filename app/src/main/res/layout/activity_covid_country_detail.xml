@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
     android:gravity="center"
-    tools:context=".ui.country.CovidCountryDetail">
+    tools:context="com.dva.covidtracker.back.country.CovidCountryDetail">
 
 
     <LinearLayout
@@ -21,8 +21,8 @@
             style="@style/TotalFontStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff"
-            tools:text="China" />
+            android:textColor="#1cb0e6"
+            tools:text="India" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,7 +43,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total Cases"
-                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textColor="#ffa600"
                 android:textSize="12sp" />
 
             <TextView
@@ -52,9 +53,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-10dp"
-                android:textColor="@color/colorTotalConfirmed"
+                android:textColor="@color/colorTotalDeaths"
                 android:textSize="26sp"
-                tools:text="80282" />
+                tools:text="00000" />
         </LinearLayout>
 
         <LinearLayout
@@ -68,7 +69,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Today Cases"
-                android:textColor="#fff"
+                android:textColor="#ffa600"
+                android:textStyle="bold"
                 android:textSize="12sp" />
 
             <TextView
@@ -102,6 +104,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total Deaths"
+                android:shadowColor="#ffffff"
+                android:shadowRadius="3"
+                android:shadowDx="2"
+                android:textStyle="bold"
+                android:shadowDy="2"
                 android:textColor="#fff"
                 android:textSize="12sp" />
 
@@ -111,7 +118,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-10dp"
-                android:textColor="@color/colorTotalDeaths"
+                android:textColor="@color/colorTotalConfirmed"
                 android:textSize="26sp"
                 tools:text="3245" />
         </LinearLayout>
@@ -127,6 +134,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Today Deaths"
+                android:shadowRadius="3"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:textStyle="bold"
                 android:textColor="#fff"
                 android:textSize="12sp" />
 
@@ -161,7 +172,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total Recovered"
-                android:textColor="#fff"
+                android:textColor="#00c22d"
+                android:textStyle="bold"
                 android:textSize="12sp" />
 
             <TextView
@@ -170,7 +182,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="-10dp"
-                android:textColor="@color/colorTotalRecovered"
+                android:textColor="@color/colorTotalDeaths"
                 android:textSize="26sp"
                 tools:text="80282" />
         </LinearLayout>
@@ -195,7 +207,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total Active"
-                android:textColor="#fff"
+                android:textColor="#000000"
+                android:textStyle="bold"
                 android:textSize="12sp" />
 
             <TextView
@@ -220,7 +233,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Total Critical"
-                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textColor="#000000"
                 android:textSize="12sp" />
 
             <TextView

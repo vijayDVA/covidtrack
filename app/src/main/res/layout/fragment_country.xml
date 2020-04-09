@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context=".ui.country.CountryFragment">
+    tools:context="com.dva.covidtracker.back.country.CountryFragment">
 
     <LinearLayout
         android:id="@+id/linearLayoutTotalCountries"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:textColor="#fff"
             android:textSize="24sp"
-            tools:text="189 countries" />
+            tools:text="INDIA" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
